@@ -50,8 +50,8 @@ export default function LeaderboardPage() {
           <p className="lead">
             No predictions yet. Be the first to enter your bracket!
           </p>
-          <Link href="/predict" className="btn">
-            Make your predictions
+          <Link href="/bracket" className="btn">
+            Fill out your bracket
           </Link>
         </div>
       ) : (

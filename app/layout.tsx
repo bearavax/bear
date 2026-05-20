@@ -4,7 +4,7 @@ import Nav from '@/components/Nav';
 import { TOURNAMENT_NAME } from '@/data/tournament';
 
 export const metadata: Metadata = {
-  title: 'Team1 World Cup Predictions',
+  title: 'Team1 World Cup',
   description: `Predict the ${TOURNAMENT_NAME} bracket and climb the team1 leaderboard. Just for fun.`,
 };
 

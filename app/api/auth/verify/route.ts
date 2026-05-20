@@ -24,7 +24,7 @@ export async function GET(req: NextRequest) {
   const user = upsertUser(email);
   const session = createSession(user.id);
 
-  const res = NextResponse.redirect(new URL('/predict', req.url));
+  const res = NextResponse.redirect(new URL('/bracket', req.url));
   res.cookies.set(SESSION_COOKIE, session, {
     httpOnly: true,
     sameSite: 'lax',

@@ -2,7 +2,12 @@ import Link from 'next/link';
 import { currentUser } from '@/lib/auth';
 import { allPredictions, getResults, playerCount } from '@/lib/predictions';
 import { scorePrediction, hasResults, POINTS } from '@/lib/scoring';
-import { TOURNAMENT_NAME, flagOf } from '@/data/tournament';
+import {
+  predictionsOpen,
+  PREDICTIONS_DEADLINE,
+  flagOf,
+} from '@/data/tournament';
+import Countdown from '@/components/Countdown';
 
 export const dynamic = 'force-dynamic';
 
@@ -28,17 +33,23 @@ export default function HomePage() {
     <>
       <section className="hero">
         <div className="ball">🏆</div>
-        <h1>Team1 {TOURNAMENT_NAME} Predictions</h1>
+        <h1>Team1 World Cup</h1>
         <p className="lead">
           Predict the bracket. Top the leaderboard. Just for fun.
         </p>
         <div className="cta-row">
-          <Link href={user ? '/predict' : '/login'} className="btn">
-            {user ? 'Make your predictions' : 'Sign up to play'}
+          <Link href={user ? '/bracket' : '/login'} className="btn">
+            {user ? 'Fill out your bracket' : 'Sign up to play'}
           </Link>
           <Link href="/leaderboard" className="btn secondary">
             Leaderboard
           </Link>
+        </div>
+        <div style={{ marginTop: 16 }}>
+          <Countdown
+            deadline={PREDICTIONS_DEADLINE}
+            locked={!predictionsOpen()}
+          />
         </div>
       </section>
 

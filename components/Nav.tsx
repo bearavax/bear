@@ -7,10 +7,11 @@ export default function Nav() {
   return (
     <nav className="nav">
       <Link href="/" className="brand">
-        ⚽ <span className="t1">team1</span> Predictions
+        ⚽ <span className="t1">team1</span> World Cup
       </Link>
       <div className="links">
-        <Link href="/predict">Predict</Link>
+        <Link href="/bracket">Bracket</Link>
+        <Link href="/live">Live</Link>
         <Link href="/leaderboard">Leaderboard</Link>
       </div>
       <div className="spacer" />
