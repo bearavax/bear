@@ -324,6 +324,53 @@ code {
   margin-top: 18px;
 }
 
+/* --- how it works steps --- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 28px 0 16px;
+}
+
+@media (max-width: 640px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+.step {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 18px;
+}
+
+.step-n {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--ava-red);
+  color: var(--white);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.step b {
+  display: block;
+  color: var(--white);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.step p {
+  margin: 0;
+  color: var(--text-tertiary);
+  font-size: 0.92rem;
+}
+
 /* --- scoring chips --- */
 .chips {
   display: flex;
