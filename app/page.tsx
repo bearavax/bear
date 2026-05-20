@@ -28,11 +28,11 @@ export default function HomePage() {
     <>
       <section className="hero">
         <div className="ball">🏆⚽</div>
-        <h1>{TOURNAMENT_NAME} Predictions</h1>
+        <h1>Team1 {TOURNAMENT_NAME} Predictions</h1>
         <p className="lead">
-          Fill in your bracket, predict the champion, and battle your friends on
-          the leaderboard. It&apos;s a free-for-fun prediction game — no money,
-          just bragging rights.
+          Fill in your bracket, predict the champion, and battle the rest of
+          team1 on the leaderboard. It&apos;s a free-for-fun prediction game —
+          no money, just bragging rights.
         </p>
         <div className="cta-row">
           <Link href={user ? '/predict' : '/login'} className="btn">
